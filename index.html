@@ -165,11 +165,11 @@
                     <div data="add-authors" class="col-12 add-form my-5 d-none">
                         <div class="row">
                             <form action="#" class="col-8 col-sm-8 col-xs-12 border mx-auto rounded shadow-sm">
-                                <div class="row p-2">
-                                    <h2 class="col-12 text-center mb-4">Add Authors</h2>
+                                <div class="row">
+                                    <h3 class="w-100 p-2 text-center">Add Authors</h3>
                                     
                                     <!-- Row to contain Image and Form Sections -->
-                                    <div class="row">
+                                    <div class="row p-2">
                                         <!-- Image Section (first on XS devices) -->
                                         <div class="col-md-3 col-sm-12 mb-2 order-sm-first order-md-last">
                                             <div class="w-100 img-middle rounded" style="aspect-ratio: 9/11;">
@@ -252,6 +252,9 @@
                     <div class="content" data="teachers">
                         <div class="row p-2">
                            <h2 class="text-center p-2 border-bottom col-12 mt-1">Teachers Designation</h2>
+                           <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-grad add-btn" data="add-teacher">Add Teacher</button>
+                           </div>
                            <div class="col-md-2 col-sm-4 mb-2 p-2 taecher-content">
                                <div class="img-middle" style="aspect-ratio: 9/11;">
                                    <img src="./img/upload-img.png" alt="Author image">
@@ -269,10 +272,94 @@
                     </div>
                     <!-- teachers section end -->
 
+                    <!-- add teacher section start -->
+                    <div data="add-teacher" class="col-12 add-form my-5 d-none">
+                        <div class="row">
+                            <form action="#" class="col-8 col-sm-8 col-xs-12 border mx-auto rounded shadow-sm">
+                                <div class="row">
+                                    <h2 class="w-100 p-2 text-center">Add Teacher</h2>
+                                    
+                                    <!-- Row to contain Image and Form Sections -->
+                                    <div class="row p-2">
+                                        <!-- Image Section (first on XS devices) -->
+                                        <div class="col-md-3 col-sm-12 mb-2 order-sm-first order-md-last">
+                                            <div class="w-100 img-middle rounded" style="aspect-ratio: 9/11;">
+                                                <img id="teacher_preview" src="./img/upload-img.png" alt="Preview" class="rounded">
+                                            </div>
+                                            <input type="file" name="teacher_image" id="teacher_image" class="d-none" accept="image/*" onchange="previewTeacherImage(event)">
+                                            <label for="teacher_image" class="btn-grad m-0 mt-2">Upload</label>
+                                        </div> <!-- Image Section -->
+
+                                        <!-- Form Section -->
+                                        <div class="col-md-9 col-sm-12 form-group">
+                                            <div class="row">
+                                                <div class="col-12 mb-2">
+                                                    <label for="name">Full Name <span style="color:red;">*</span></label>
+                                                    <input class="form-control" type="text" name="name" id="name" required placeholder="e.g. John">
+                                                </div> <!-- Full Name -->
+
+                                                <div class="col-12 mb-2">
+                                                    <label for="phone_no">Phone Number <span style="color:red;">*</span></label>
+                                                    <input type="tel" name="phone_no" id="phone_no" required class="form-control" placeholder="01*********">
+                                                </div> <!-- Phone Number -->
+
+                                                <div class="col-12 mb-2">
+                                                    <label for="email">Email <span style="color:red;">*</span></label>
+                                                    <input type="email" name="email" id="email" required class="form-control" placeholder="e.g. john@example.com">
+                                                    <small id="emailHelp" class="form-text text-muted">
+                                                        <span style="color: red;">&#35;</span>eMail address is username
+                                                    </small>
+                                                </div> <!-- Email -->
+                                            </div>
+                                        </div> <!-- Form Section -->
+                                    </div>
+
+                                </div>
+                                <div class="row p-0">
+                                    <div class="col-md-6 col-sm-6 mb-2 form-group">
+                                        <label for="designation">Designation <span style="color:red;">*</span></label>
+                                        <select name="designation" id="designation" class="form-control" required>
+                                            <option value="">Select Designation</option>
+                                            <option value="cheap-instruction">Cheap Instructor</option>
+                                        </select>
+                                    </div> <!--designation-->
+
+                                    <div class="col-md-6 col-sm-6 mb-2 form-group">
+                                        <label for="department">Department</label>
+                                        <select name="department" id="department" class="form-control">
+                                            <option value="">Select Department</option>
+                                            <option value="cheap-instruction">Cheap Instructor</option>
+                                        </select>
+                                    </div> <!--department-->
+
+                                    <div class="col-12 mb-2">
+                                        <label for="details">Details</label>
+                                        <textarea name="details" id="details" class="form-control" cols="30" rows="10" placeholder="Write details"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row p-0">
+                                    <!-- Bottom Section for Buttons -->
+                                    <div class="col-12 my-2 d-flex justify-content-end ">
+                                        <button type="button" class="cancel-btn btn-grad">Cancel</button>
+                                        <button class="btn-grad ml-2" type="submit">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!-- add teacher section end -->
+
                     <!-- departments section start -->
                      <div class="content" data="departments">
                          <div class="row p-2" >
                              <h2 class="text-center p-2 border-bottom col-12 mt-1">Departments</h2>
+
+                             <div class="col-12 d-flex justify-content-end">
+                                 <button class="btn-grad add-btn" data="add-department">Add Department</button>
+                            </div>
+
                              <div class="col-md-3 col-sm-4 mb-2 p-0 shadow-sm departments-content border">
                                  <div class="img-middle" style="aspect-ratio: 16/9;">
                                      <img src="./img/upload-img.png" alt="Author image">
@@ -283,10 +370,59 @@
                      </div>
                     <!-- departments section end -->
 
+                    <!-- add departments section start -->
+                     <div data="add-department" class="col-12 add-form my-5 d-none">
+                        <div class="row">
+                            <div class="col-md-9 col-sm-12 col-xs-12 mx-auto">
+                                <form class="border rounded shadow-sm" action="">
+                                    <h3 class="w-100 border-bottom p-2 text-center">Add Department</h3>
+                                    <div class="form-section p-2">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="w-100 mb-2">
+                                                    <label for="name">Department Name <span>*</span></label>
+                                                    <input type="text" name="name" id="name" class="form-control">
+                                                </div> <!--Deparment Name-->
+
+                                                <div class="w-100 mb-2">
+                                                    <label for="code">Department Code <span>*</span></label>
+                                                    <input type="text" name="code" id="code" class="form-control">
+                                                </div> <!--Department Code-->
+
+                                                <div class="w-100 mb-2">
+                                                    <label for="details">Department Detail</label>
+                                                    <textarea name="details" id="details" placeholder="Add Details" class="form-control"></textarea>
+                                                </div> <!--Department Details-->
+                                            </div> <!--Department info-->
+
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="w-100 img-middle border rounded shadow-sm" style="aspect-ratio: 16/9;">
+                                                    <img id="dep-img-preview" src="img/upload-img.png" alt="">
+                                                </div>
+                                                <input type="file" name="dep-img" id="dep-img" class="d-none" onchange="previewDepartmentImage(event)">
+                                                <label class="btn-grad m-0 mt-1" for="dep-img">Upload</label>
+                                            </div> <!---department image-->
+
+                                            <div class="col-12 d-flex justify-content-end">
+                                                <button type="button" class="cancel-btn">Cancel</button>
+                                                <button type="submit" class="btn-grad">Add</button>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                     </div>
+                    <!-- add departments section end -->
+
                     <!-- probidhan section start -->
                      <div class="content" data="probidhans">
                          <div class="row  p-2">
                             <h2 class="text-center p-2 border-bottom col-12 mt-1">Probidhans</h2>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-grad add-btn" data="add-probidhan">Add Probidhan</button>
+                           </div>
+
                             <div class="col-3 p-2 probidhan-content shadow-sm border rounded">
                                 <h5>2022</h5>
                                 <small>Passed on 2022</small>
@@ -294,6 +430,31 @@
                          </div>
                      </div>
                     <!-- probidhan section end -->
+
+                    <!-- add probidhan section start -->
+                     <div class="col-md-6 col-sm-12 add-form my-5 mx-auto d-none" data="add-probidhan">
+                        <form action="" class="border rounded shadow-sm">
+                            <h3 class="w-100 p-2 text-center">Add Probidhan</h3>
+                            <div class="row p-2">
+                                <div class="col-12 mb-2">
+                                    <label for="probidhan">Probidhan <span>*</span></label>
+                                    <input type="text" name="probidhan" id="probidhan" class="form-control">
+                                </div><!--probidhan-->
+
+                                <div class="col-12 mb-2">
+                                    <label for="year">Year <span>*</span></label>
+                                    <input type="text" name="year" id="year" class="form-control">
+                                </div> <!--publish year-->
+
+
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="button" class="cancel-btn">Cancel</button>
+                                    <button type="submit" class="btn-grad">Add</button>
+                                </div> <!--buttons-->
+                            </div>
+                        </form>
+                     </div>
+                    <!-- add probidhan section end -->
 
                     <!-- student section start -->
                      <div class="content" data="students">

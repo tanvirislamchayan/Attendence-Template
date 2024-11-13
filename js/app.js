@@ -110,3 +110,31 @@ function previewImage(event) {
         reader.readAsDataURL(file);
     }
 }
+
+// Teacher image preview
+function previewTeacherImage(event) {
+    const preview = document.getElementById('teacher_preview'); // Use the correct img element ID
+    const file = event.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+}
+
+// department image preview
+function previewDepartmentImage(event) {
+    const preview = document.getElementById('dep-img-preview'); // Target the img element for preview
+    const file = event.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result; // Set the img src to the file data URL
+        }
+        reader.readAsDataURL(file); // Read the file as a data URL
+    }
+}
