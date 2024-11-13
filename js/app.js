@@ -1,3 +1,9 @@
+window.addEventListener("load", function() {
+    const loaderSection = document.getElementById("loader-section");
+    loaderSection.style.display = "none";
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
@@ -58,4 +64,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
     }
+
+    const addBtn = document.querySelectorAll('.add-btn');
+    const addForm = document.querySelectorAll('.add-form');
+    const cancelBtn = document.querySelectorAll('.cancel-btn');
+    
+    addBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            pageContents.forEach(content => {
+                content.classList.add('d-none');
+            });
+            addForm.forEach(form => {
+                if (form.getAttribute('data') === btn.getAttribute('data')) {
+                    form.classList.remove('d-none');
+                }
+            });
+        });
+    });
+    
+    cancelBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            addForm.forEach(form => {
+                form.classList.add('d-none');
+            });
+            pageContents.forEach(content => {
+                loadPage(page)
+            });
+        });
+    });
+    
+    
 });
+
+
+// image preveiw                                
+function previewImage(event) {
+    const preview = document.getElementById('preview');
+    const file = event.target.files[0];
+    
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+    }
+}

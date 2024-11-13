@@ -19,6 +19,23 @@
   </head>
   <body>
 
+    <!-- loader section start -->
+     <section id="loader-section" class="loader-section">
+        <div class="loader">
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="50"></circle>
+            </svg>
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="50"></circle>
+            </svg>
+            <svg viewBox="0 0 200 200">
+              <circle cx="100" cy="100" r="50"></circle>
+            </svg>
+          </div>
+     </section>
+    <!-- loader section end -->
+
+
     <!-- header section start -->
      <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light text-white bg-transparent">
@@ -113,6 +130,17 @@
                      <div class="content" data="authors">
                          <div class="row p-2">
                             <h2 class="text-center p-2 border-bottom col-12 mt-1">Authors</h2>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button class="btn-grad add-btn" data="add-authors">Add Authors</button>
+                            </div>
+
+                            <div class="col-md-2 col-sm-4 mb-2 p-2 shadow-sm author-content">
+                                <div class="img-middle" style="aspect-ratio: 9/11;">
+                                    <img src="./img/upload-img.png" alt="Author image">
+                                </div>
+                                <h6 class="mb-0 mt-1 pl-1">Name</h6>
+                                <small class="pl-1 mb-1">Designaton</small>
+                            </div>
 
                             <div class="col-md-2 col-sm-4 mb-2 p-2 shadow-sm author-content">
                                 <div class="img-middle" style="aspect-ratio: 9/11;">
@@ -132,6 +160,61 @@
                          </div>
                      </div>
                     <!-- author section end -->
+
+                    <!-- Add Author Section Start -->
+                    <div data="add-authors" class="col-12 add-form mt-3 d-none">
+                        <div class="container">
+                            <div class="row ">
+                                <form action="#" class="col-8 border mx-auto rounded shadow-sm p-3">
+                                    <div class="row">
+                                        <h2 class="col-12 text-center mb-4">Add Authors</h2>
+                                        
+                                        <!-- Row to contain Image and Form Sections -->
+                                        <div class="row">
+                                            <!-- Image Section (first on XS devices) -->
+                                            <div class="col-md-3 col-sm-12 mb-2 order-sm-first order-md-last">
+                                                <div class="w-100 img-middle rounded" style="aspect-ratio: 9/11;">
+                                                    <img id="preview" src="./img/upload-img.png" alt="Preview" class="rounded">
+                                                </div>
+                                                <input type="file" name="author_image" id="author_image" class="d-none" accept="image/*" onchange="previewImage(event)">
+                                                <label for="author_image" class="btn-grad m-0 mt-2">Upload</label>
+                                            </div> <!-- Image Section -->
+    
+                                            <!-- Form Section -->
+                                            <div class="col-md-9 col-sm-12 form-group">
+                                                <div class="row">
+                                                    <div class="col-12 mb-2">
+                                                        <label for="name">Full Name <span style="color:red;">*</span></label>
+                                                        <input class="form-control" type="text" name="name" id="name" required placeholder="e.g. John">
+                                                    </div> <!-- Full Name -->
+    
+                                                    <div class="col-12 mb-2">
+                                                        <label for="phone_no">Phone Number <span style="color:red;">*</span></label>
+                                                        <input type="tel" name="phone_no" id="phone_no" required class="form-control" placeholder="01*********">
+                                                    </div> <!-- Phone Number -->
+    
+                                                    <div class="col-12 mb-2">
+                                                        <label for="email">Email <span style="color:red;">*</span></label>
+                                                        <input type="email" name="email" id="email" required class="form-control" placeholder="e.g. john@example.com">
+                                                        <small id="emailHelp" class="form-text text-muted">
+                                                            <span style="color: red;">&#35;</span>Your email address is your username
+                                                        </small>
+                                                    </div> <!-- Email -->
+                                                </div>
+                                            </div> <!-- Form Section -->
+                                        </div>
+                                        
+                                        <!-- Bottom Section for Buttons -->
+                                        <div class="col-12 mb-2 d-flex justify-content-end">
+                                            <button type="button" class="cancel-btn btn-grad">Cancel</button>
+                                            <button class="btn-grad ml-2" type="submit">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Author Section End -->
 
                     <!-- teachers section start -->
                     <div class="content" data="teachers">
