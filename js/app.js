@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the title based on the 'page' parameter in the URL
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page');
+    const pageContents = document.querySelectorAll('.content');
+
     if (page) {
         document.getElementById('title').textContent = `IPI | ${page.toUpperCase()}`;
         asideMenu.forEach(menu=> {
@@ -37,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 menu.classList.add('selected')
             } 
         });
-        const pageContents = document.querySelectorAll('.content');
         pageContents.forEach(content => {
             content.classList.add('d-none');
             if(content.getAttribute('data') === page) {
@@ -47,5 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         var dashboard = document.getElementById('dashboard');
         dashboard.classList.add('selected')
+        pageContents.forEach(content => {
+            content.classList.add('d-none');
+            if(content.getAttribute('data') === 'dashboard') {
+                content.classList.remove('d-none');
+                content.classList.add('d-block');
+
+            }
+        });
+        
     }
 });
