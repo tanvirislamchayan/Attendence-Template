@@ -41,6 +41,28 @@
  body {
   font-family: "Roboto", sans-serif;
  }
+
+ .img-middle {
+  display: grid;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.img-middle:nth-child(odd){
+  background-color: var(--background);
+}
+
+.img-middle:nth-child(even){
+  background-color: var(--background-3);
+}
+
+.img-middle img {
+  height: 100%;
+  object-fit: cover;
+}
+
  
 
  /* header section */
@@ -67,20 +89,34 @@ header {
   background-color: var(--background-2);
   color: #fff;
   min-height: 90vh;
-
+  position: relative;
 }
 
-.aside .aside-menu {
+.aside-content {
+  position: sticky;
+  top: 70px;
+}
+
+.aside-menu {
   border-bottom: 1px solid #fff;
+  cursor: pointer;
 }
 
-.aside .aside-menu:last-child {
+.aside-menu:last-child {
   border: 0;
+}
+
+.aside-menu.selected{
+  background-color: #ddd5;
+}
+
+.aside-menu:hover {
+  background-color: #ddd5;
 }
 
 /* content section */
 .content {
-  padding: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* dashboard */
@@ -94,4 +130,23 @@ header {
   background-color: var(--background-3);
   cursor: pointer;
   color: #ffff;
+}
+
+/* author section */
+
+/* teachers section */
+
+/* departments section */
+
+/* probidhan section */
+.probidhan-content:nth-child(odd) {
+  background-color: var(--background);
+}
+
+.probidhan-content:nth-child(even) {
+  background-color: var(--background-3);
+}
+
+.probidhan-content {
+  color: white;
 }
