@@ -93,7 +93,7 @@ input:focus {
 }
 
 form {
-  padding: 1.5rem !important;
+  /* padding: rem !important; */
 }
 
 /* loader section */

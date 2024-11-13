@@ -163,58 +163,90 @@
 
                     <!-- Add Author Section Start -->
                     <div data="add-authors" class="col-12 add-form mt-3 d-none">
-                        <div class="container">
-                            <div class="row ">
-                                <form action="#" class="col-8 border mx-auto rounded shadow-sm">
+                        <div class="row">
+                            <form action="#" class="col-8 border mx-auto rounded shadow-sm">
+                                <div class="row p-2">
+                                    <h2 class="col-12 text-center mb-4">Add Authors</h2>
+                                    
+                                    <!-- Row to contain Image and Form Sections -->
                                     <div class="row">
-                                        <h2 class="col-12 text-center mb-4">Add Authors</h2>
-                                        
-                                        <!-- Row to contain Image and Form Sections -->
-                                        <div class="row">
-                                            <!-- Image Section (first on XS devices) -->
-                                            <div class="col-md-3 col-sm-12 mb-2 order-sm-first order-md-last">
-                                                <div class="w-100 img-middle rounded" style="aspect-ratio: 9/11;">
-                                                    <img id="preview" src="./img/upload-img.png" alt="Preview" class="rounded">
-                                                </div>
-                                                <input type="file" name="author_image" id="author_image" class="d-none" accept="image/*" onchange="previewImage(event)">
-                                                <label for="author_image" class="btn-grad m-0 mt-2">Upload</label>
-                                            </div> <!-- Image Section -->
-    
-                                            <!-- Form Section -->
-                                            <div class="col-md-9 col-sm-12 form-group">
-                                                <div class="row">
-                                                    <div class="col-12 mb-2">
-                                                        <label for="name">Full Name <span style="color:red;">*</span></label>
-                                                        <input class="form-control" type="text" name="name" id="name" required placeholder="e.g. John">
-                                                    </div> <!-- Full Name -->
-    
-                                                    <div class="col-12 mb-2">
-                                                        <label for="phone_no">Phone Number <span style="color:red;">*</span></label>
-                                                        <input type="tel" name="phone_no" id="phone_no" required class="form-control" placeholder="01*********">
-                                                    </div> <!-- Phone Number -->
-    
-                                                    <div class="col-12 mb-2">
-                                                        <label for="email">Email <span style="color:red;">*</span></label>
-                                                        <input type="email" name="email" id="email" required class="form-control" placeholder="e.g. john@example.com">
-                                                        <small id="emailHelp" class="form-text text-muted">
-                                                            <span style="color: red;">&#35;</span>Your email address is your username
-                                                        </small>
-                                                    </div> <!-- Email -->
-                                                </div>
-                                            </div> <!-- Form Section -->
-                                        </div>
-                                        
-                                        <!-- Bottom Section for Buttons -->
-                                        <div class="col-12 mb-2 d-flex justify-content-end">
-                                            <button type="button" class="cancel-btn btn-grad">Cancel</button>
-                                            <button class="btn-grad ml-2" type="submit">Submit</button>
-                                        </div>
+                                        <!-- Image Section (first on XS devices) -->
+                                        <div class="col-md-3 col-sm-12 mb-2 order-sm-first order-md-last">
+                                            <div class="w-100 img-middle rounded" style="aspect-ratio: 9/11;">
+                                                <img id="preview" src="./img/upload-img.png" alt="Preview" class="rounded">
+                                            </div>
+                                            <input type="file" name="author_image" id="author_image" class="d-none" accept="image/*" onchange="previewImage(event)">
+                                            <label for="author_image" class="btn-grad m-0 mt-2">Upload</label>
+                                        </div> <!-- Image Section -->
+
+                                        <!-- Form Section -->
+                                        <div class="col-md-9 col-sm-12 form-group">
+                                            <div class="row">
+                                                <div class="col-12 mb-2">
+                                                    <label for="name">Full Name <span style="color:red;">*</span></label>
+                                                    <input class="form-control" type="text" name="name" id="name" required placeholder="e.g. John">
+                                                </div> <!-- Full Name -->
+
+                                                <div class="col-12 mb-2">
+                                                    <label for="phone_no">Phone Number <span style="color:red;">*</span></label>
+                                                    <input type="tel" name="phone_no" id="phone_no" required class="form-control" placeholder="01*********">
+                                                </div> <!-- Phone Number -->
+
+                                                <div class="col-12 mb-2">
+                                                    <label for="email">Email <span style="color:red;">*</span></label>
+                                                    <input type="email" name="email" id="email" required class="form-control" placeholder="e.g. john@example.com">
+                                                    <small id="emailHelp" class="form-text text-muted">
+                                                        <span style="color: red;">&#35;</span>eMail address is username
+                                                    </small>
+                                                </div> <!-- Email -->
+                                            </div>
+                                        </div> <!-- Form Section -->
                                     </div>
-                                </form>
-                            </div>
+
+                                </div>
+                                <div class="row p-0">
+                                    <div class="col-md-6 col-sm-6 mb-2 form-group">
+                                        <label for="designation">Designation <span style="color:red;">*</span></label>
+                                        <select name="designation" id="designation" class="form-control" required>
+                                            <option value="">Select Designation</option>
+                                            <option value="cheap-instruction">Cheap Instructor</option>
+                                        </select>
+                                    </div> <!--designation-->
+
+                                    <div class="col-md-6 col-sm-6 mb-2 form-group">
+                                        <label for="department">Department</label>
+                                        <select name="department" id="department" class="form-control">
+                                            <option value="">Select Department</option>
+                                            <option value="cheap-instruction">Cheap Instructor</option>
+                                        </select>
+                                    </div> <!--department-->
+
+                                    <div class="col-12 mb-2">
+                                        <label for="details">Details</label>
+                                        <textarea name="details" id="details" class="form-control" cols="30" rows="10" placeholder="Write details"></textarea>
+                                    </div>
+
+                                    <div class="col-md-12 mb-2">
+                                        <div class="form-group">
+                                            <label for="author" title="This will give all permissions to access for software">Authority Permission: </label>
+                                            <input type="checkbox" name="author" id="author" checked>
+                                        </div>
+                                    </div> <!--Author Permission-->
+                                </div>
+
+                                <div class="row p-0">
+                                    <!-- Bottom Section for Buttons -->
+                                    <div class="col-12 my-2 d-flex justify-content-end ">
+                                        <button type="button" class="cancel-btn btn-grad">Cancel</button>
+                                        <button class="btn-grad ml-2" type="submit">Submit</button>
+                                    </div>
+                                </div>
+
+                            </form>
                         </div>
                     </div>
                     <!-- Add Author Section End -->
+
 
                     <!-- teachers section start -->
                     <div class="content" data="teachers">
