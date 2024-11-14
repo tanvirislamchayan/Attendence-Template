@@ -80,51 +80,68 @@
 
                 <!-- main content section start -->
                  <div class="col-md-10 col-sm-9 main-content">
-                    <!-- dashboard section start -->
-                     <div class="content" data="dashboard">
-                         <div class="row p-2">
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="authors">
-                                <h5>Author</h5>
-                                <small>1 Person</small>
+                    <!-- Dashboard Section Start -->
+                    <div class="content p-2" data="dashboard">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="authors">
+                                <div>
+                                    <h5>Author</h5>
+                                    <small>1 Person</small>
+                                </div>
                             </div> <!--Author-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="teachers">
-                                <h5>Teachers</h5>
-                                <small>10 Teachers</small>
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="teachers">
+                                <div>
+                                    <h5>Teachers</h5>
+                                    <small>10 Teachers</small>
+                                </div>
                             </div> <!--Teachers-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="departments">
-                                <h5>Departments</h5>
-                                <small>10 Departments</small>
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="departments">
+                                <div>
+                                    <h5>Departments</h5>
+                                    <small>10 Departments</small>
+                                </div>
                             </div> <!--Departments-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="probidhans">
-                                <h5>Probidhans</h5>
-                                <small>10 Probidhans</small>
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="probidhans">
+                                <div>
+                                    <h5>Probidhans</h5>
+                                    <small>10 Probidhans</small>
+                                </div>
                             </div> <!--Probidhans-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="students">
-                                <h5>Students</h5>
-                                <small>10 Students</small>
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="students">
+                                <div>
+                                    <h5>Students</h5>
+                                    <small>10 Students</small>
+                                </div>
                             </div> <!--Students-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="subjects">
-                                <h5>Subjects</h5>
-                                <small>10 Subjects</small>
-                            </div> <!--Students-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="attendence">
-                                <h5>Attendence</h5>
-                                <small class="invisible">N/A</small>
-                            </div> <!--Attendence-->
-    
-                            <div class="col-md-3 col-sm-4 p-2 border shadow-sm rounded mb-2 dashboard-content" data="attendence-calculation">
-                                <h5>Attendence Calculation</h5>
-                                <small class="invisible">N/A</small>
-                            </div> <!--Attendence-->
-                         </div>
-                     </div>
-                    <!-- dashboard section end -->
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="subjects">
+                                <div>
+                                    <h5>Subjects</h5>
+                                    <small>10 Subjects</small>
+                                </div>
+                            </div> <!--Subjects-->
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendence">
+                                <div>
+                                    <h5>Attendance</h5>
+                                    <small class="invisible">N/A</small>
+                                </div>
+                            </div> <!--Attendance-->
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendence-calculation">
+                                <div>
+                                    <h5>Attendance Calculation</h5>
+                                    <small class="invisible">N/A</small>
+                                </div>
+                            </div> <!--Attendance Calculation-->
+                        </div>
+                    </div>
+                    <!-- Dashboard Section End -->
+
 
                     <!-- author section start -->
                      <div class="content" data="authors">
@@ -423,9 +440,11 @@
                                 <button class="btn-grad add-btn" data="add-probidhan">Add Probidhan</button>
                            </div>
 
-                            <div class="col-3 p-2 probidhan-content shadow-sm border rounded">
-                                <h5>2022</h5>
-                                <small>Passed on 2022</small>
+                            <div class="col-3 p-2 probidhan-content">
+                                <div>
+                                    <h5>2022</h5>
+                                    <small>Passed on 2022</small>
+                                </div>
                             </div>
                          </div>
                      </div>
@@ -456,13 +475,52 @@
                      </div>
                     <!-- add probidhan section end -->
 
-                    <!-- student section start -->
-                     <div class="content" data="students">
-                        <div class="row p-2">
-                            <h2 class="text-center p-2 border-bottom col-12 mt-1">Students</h2>
+                    <!-- Student Section Start -->
+                    <div class="content p-2" data="students">
+                        <div class="row">
+                            <h3 class="col-12 p-2">Students</h3>
+                            <form action="/students" method="GET" class="w-100 p-2">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 mb-2">
+                                        <label for="department">Department</label>
+                                        <select name="department" id="department" class="form-control">
+                                            <option selected value="">Select Department</option>
+                                            <option value="computer">Computer Science and Technology</option>
+                                            <option value="mechanical">Mechanical Engineering</option>
+                                            <option value="electrical">Electrical Engineering</option>
+                                        </select>
+                                    </div><!-- Department Filter -->
+
+                                    <div class="col-md-3 col-sm-6 mb-2">
+                                        <label for="probidhan">Probidhan</label>
+                                        <select name="probidhan" id="probidhan" class="form-control">
+                                            <option selected value="">Select Probidhan</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2020">2020</option>
+                                        </select>
+                                    </div><!-- Probidhan Filter -->
+
+                                    <div class="col-md-3 col-sm-6 mb-2">
+                                        <label for="session">Session</label>
+                                        <select name="session" id="session" class="form-control">
+                                            <option selected value="">Select Session</option>
+                                            <option value="fall">Fall</option>
+                                            <option value="spring">Spring</option>
+                                            <option value="summer">Summer</option>
+                                        </select>
+                                    </div><!-- Session Filter -->
+
+                                    <div class="col-md-3 col-sm-6 mb-2">
+                                        <label>&nbsp;</label> <!-- Spacer for alignment -->
+                                        <input type="submit" value="Filter" class="btn-grad form-control">
+                                    </div><!-- Filter Button -->
+                                </div>
+                            </form>
                         </div>
-                     </div>
-                    <!-- student section end -->
+                    </div>
+                    <!-- Student Section End -->
+
                  </div>
                 <!-- content section end -->
             </div>

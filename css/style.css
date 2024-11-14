@@ -93,6 +93,10 @@ form span {
   color: red;
 }
 
+/* select {
+  width: 100%;
+} */
+
 
 /* loader section */
 .loader-section {
@@ -210,14 +214,20 @@ header {
   color: #fff;
 }
 
+
 /* dashboard */
-.dashboard-content:nth-child(even) {
+.dashboard-content div {
+  padding: .5rem;
+  border-radius: .2rem;
+}
+
+.dashboard-content:nth-child(even) div {
   background-color: var(--background);
   cursor: pointer;
   color: #ffff;
 }
 
-.dashboard-content:nth-child(odd) {
+.dashboard-content:nth-child(odd) div {
   background-color: var(--background-3);
   cursor: pointer;
   color: #ffff;
@@ -236,11 +246,16 @@ header {
 /* add departments section */
 
 /* probidhan section */
-.probidhan-content:nth-child(odd) {
+.probidhan-content div {
+  padding: .5rem;
+  border-radius: .2rem;
+}
+
+.probidhan-content:nth-child(odd) div{
   background-color: var(--background);
 }
 
-.probidhan-content:nth-child(even) {
+.probidhan-content:nth-child(even) div{
   background-color: var(--background-3);
 }
 
