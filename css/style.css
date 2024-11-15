@@ -59,6 +59,7 @@
 
  body {
   font-family: "Roboto", sans-serif;
+  width: 100%;
  }
 
  .img-middle {
@@ -93,9 +94,9 @@ form span {
   color: red;
 }
 
-/* select {
-  width: 100%;
-} */
+.required {
+  color: red;
+}
 
 
 /* loader section */
@@ -283,11 +284,44 @@ header {
   background-color: var(--background);
 }
 
+
 /* add seasson section */
+.semester-ceontent div {
+  color: #fff;
+  padding: .5rem;
+  border-radius: .2rem;
+  box-shadow: 0px 2px 8px #0005;
+}
+
+.semester-ceontent:nth-child(odd) div{
+  background-color: var(--background);
+}
+
+.semester-ceontent:nth-child(even) div{
+  background-color: var(--background-3);
+}
+/* semsester section */
+
+/* add semester section */
 
 /* subject section */
+.subject-content div {
+  color: #fff;
+  padding: .5rem;
+  border-radius: .2rem;
+  box-shadow: 0px 2px 8px #0005;
+}
 
+.subject-content:nth-child(odd) div{
+  background-color: var(--background);
+}
+
+.subject-content:nth-child(even) div{
+  background-color: var(--background-3);
+}
 /* add subject section */
+
+/* filter subject seciton */
 
 /* attendence section */
 

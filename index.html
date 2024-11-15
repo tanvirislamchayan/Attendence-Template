@@ -72,8 +72,10 @@
                         <div class="aside-menu p-2 m-0" data="departments">Departments</div>
                         <div class="aside-menu p-2 m-0" data="probidhans">Probidhans</div>
                         <div class="aside-menu p-2 m-0" data="seasson">Seasson</div>
-                        <div class="aside-menu p-2 m-0" data="attendence">Attendence</div>
-                        <div class="aside-menu p-2 m-0" data="attendence-calculation">Attendence Calculation</div>
+                        <div class="aside-menu p-2 m-0" data="semester">Semester</div>
+                        <div class="aside-menu p-2 m-0" data="subjects">Subjects</div>
+                        <div class="aside-menu p-2 m-0" data="attendance">Attendance</div>
+                        <div class="aside-menu p-2 m-0" data="attendance-calculation">Attendance Calculation</div>
                     </div>
                  </div>
                 <!-- aside section end -->
@@ -116,7 +118,14 @@
                                     <h5>Seassons</h5>
                                     <small>10 Seassons</small>
                                 </div>
-                            </div> <!--Students-->
+                            </div> <!--Seassons-->
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="semester">
+                                <div>
+                                    <h5>Semesters</h5>
+                                    <small>8 Semesters</small>
+                                </div>
+                            </div> <!--semesters-->
 
                             <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="subjects">
                                 <div>
@@ -125,14 +134,14 @@
                                 </div>
                             </div> <!--Subjects-->
 
-                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendence">
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendance">
                                 <div>
                                     <h5>Attendance</h5>
                                     <small class="invisible">N/A</small>
                                 </div>
                             </div> <!--Attendance-->
 
-                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendence-calculation">
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendance-calculation">
                                 <div>
                                     <h5>Attendance Calculation</h5>
                                     <small class="invisible">N/A</small>
@@ -243,11 +252,16 @@
                                         <textarea name="details" id="details" class="form-control" cols="30" rows="10" placeholder="Write details"></textarea>
                                     </div>
 
-                                    <div class="col-md-12 mb-2">
+                                    <div class="col-md-12 mb-2 d-flex justify-content-start" style="gap:20px;">
                                         <div class="form-group">
-                                            <label for="author" title="This will give all permissions to access for software">Authority Permission: </label>
-                                            <input type="checkbox" name="author" id="author" checked>
-                                        </div>
+                                            <label for="is_author" title="This will give all permissions to access for software">Authority Permission: </label>
+                                            <input type="checkbox" name="is_author" id="is_author" checked>
+                                        </div> <!--Authority permission-->
+
+                                        <div class="form-group">
+                                            <label for="is_teacher" title="This will give all permissions to access for software">Teacher Permission: </label>
+                                            <input type="checkbox" name="is_teacher" id="is_teacher" checked>
+                                        </div> <!--Teacher Permission-->
                                     </div> <!--Author Permission-->
                                 </div>
 
@@ -353,6 +367,18 @@
                                         <label for="details">Details</label>
                                         <textarea name="details" id="details" class="form-control" cols="30" rows="10" placeholder="Write details"></textarea>
                                     </div>
+
+                                    <div class="col-md-12 mb-2 d-flex justify-content-start" style="gap:20px;">
+                                        <div class="form-group">
+                                            <label for="is_author" title="This will give all permissions to access for software">Authority Permission: </label>
+                                            <input type="checkbox" name="is_author" id="is_author" disabled="disabled">
+                                        </div> <!--Authority permission-->
+
+                                        <div class="form-group">
+                                            <label for="is_teacher" title="This will give all permissions to access for software">Teacher Permission: </label>
+                                            <input type="checkbox" name="is_teacher" id="is_teacher" checked disabled="disabled">
+                                        </div> <!--Teacher Permission-->
+                                    </div> <!--Author Permission-->
                                 </div>
 
                                 <div class="row p-0">
@@ -377,7 +403,7 @@
                                  <button class="btn-grad add-btn" data="add-department">Add Department</button>
                             </div>
 
-                             <div class="col-md-3 col-sm-4 mb-2 p-0 shadow-sm departments-content border">
+                             <div class="col-md-3 col-sm-6 mb-2 p-0 shadow-sm departments-content border">
                                  <div class="img-middle" style="aspect-ratio: 16/9;">
                                      <img src="./img/upload-img.png" alt="Author image">
                                  </div>
@@ -440,7 +466,7 @@
                                 <button class="btn-grad add-btn" data="add-probidhan">Add Probidhan</button>
                            </div>
 
-                            <div class="col-3 p-2 probidhan-content">
+                            <div class="col-md-3 col-sm-6 p-2 probidhan-content">
                                 <div>
                                     <h5>2022</h5>
                                     <small>Passed on 2022</small>
@@ -522,6 +548,242 @@
                         </form>
                      </div>
                     <!-- add seasson section end -->
+
+                    <!-- Semester section start -->
+                    <div class="content p-2" data="semester">
+                        <div class="row">
+                            <h3 class="p-2 text-center col-12">Semesters</h3>
+                            <!-- <div class="col-12 d-flex justify-content-end">
+                                <button data="add-semester" class="btn-grad add-btn">Add Semester</button>
+                            </div> -->
+                            <div class="col-md-3 col-sm-6 p-2 semester-ceontent">
+                                <div>
+                                    <h5>21-22</h5>
+                                    <small>Starting Year 2021</small>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 p-2 semester-ceontent">
+                                <div>
+                                    <h5>22-23</h5>
+                                    <small>Starting Year 2022</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Semester section end -->
+
+                    <!-- subjects section start -->
+                     <div class="content p-2" data="subjects">
+                        <div class="row">
+                            <h3 class="w-100 p-2 text-center">Subjects for 1st Semester</h3>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button data="filter-subject" type="button" class="btn-grad add-btn">Filter Subject</button>
+                                <button data="add-subject" class="btn-grad add-btn">Add Subjects</button>
+                            </div>
+                            <div class="col-md-3 col-sm-6 p-2 subject-content">
+                                <div>
+                                    <h5>Subject name</h5>
+                                    <small>Code: 12345</small>
+                                    <small>Credit: 3</small>
+                                    <small>Theory: 2</small>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    <!-- subjects section end -->
+
+                    <!-- filter subject section start -->
+                    <div class="col-12 add-form p-2 d-none" data="filter-subject">
+                        <div class="row">
+                            <h3 class="col-12 p-2 text-center">Filter Subjects</h3>
+                            <div class="col-md-6 col-sm-12 mx-auto my-5">
+                                <form action="" class="border shadow-sm p-2">
+                                    <div class="row">
+
+                                        <div class="col-12 mb-2">
+                                            <label for="f_department">Department <span>*</span></label>
+                                            <select name="f_department" id="f_department" class="form-control" required>
+                                                <option value="">Select Department</option>
+                                            </select>
+                                        </div><!--Department-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="f_semester">Semester <span>*</span></label>
+                                            <select name="f_semester" id="f_semester" class="form-control" required>
+                                                <option value="">Select Semester</option>
+                                            </select>
+                                        </div><!--semester-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="f_probidhan">Probidhan <span>*</span></label>
+                                            <select name="f_probidhan" id="f_probidhan" class="form-control" required>
+                                                <option value="">Select Probidhan</option>
+                                            </select>
+                                        </div><!--Probidhan-->
+
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="btn-grad">Filter</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- filter subject section end -->
+
+                    <!-- add subject section start -->
+                    <div class="col-12 add-form p-2 d-none" data="add-subject">
+                        <div class="row">
+                            <h3 class="text-center col-12 p-2 text-white">Add Subjects</h3>
+                            <div class="col-md-6 col-sm-12 mx-auto my-5">
+                                <form action="" class="border rounded shadow-sm p-2">
+                                    <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <label for="subject_name">Subject Name <span>*</span></label>
+                                            <input class="form-control" title="Enter Subject Name" type="text" name="subject_name" id="subject_name" required placeholder="Subject Name">
+                                        </div> <!--subject name-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="subject_code">Subject Code <span>*</span></label>
+                                            <input class="form-control" title="Enter Subject Code" type="text" name="subject_name" id="subject_name" required placeholder="Subject Code">
+                                        </div> <!--subject code-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="subject_semester">Semester <span>*</span></label>
+                                            <select name="subject_semester" id="subject_semester" class="form-control" required>
+                                                <option value="">Select Semester</option>
+                                            </select>
+                                        </div> <!--subject semester-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="subject_department">Department <span>*</span></label>
+                                            <select name="subject_department" id="subject_department" class="form-control" required>
+                                                <option value="">Select Department</option>
+                                            </select>
+                                        </div> <!--subject Department-->
+
+                                        <div class="col-md-6 col-sm-12 mb-2">
+                                            <label for="subject_probidhan">Probidhan <span>*</span></label>
+                                            <select name="subject_probidhan" id="subject_probidhan" class="form-control">
+                                                <option value="">Select Probidhan</option>
+                                            </select>
+                                        </div> <!--subject Probidhan-->
+
+                                        <div class="col-md-4 col-sm-6 mb-2">
+                                            <label for="subject_theory">Theory</label>
+                                            <input type="text" class="form-control" name="subject_theory" id="subject_theory" placeholder="Thory">
+                                        </div> <!--subject Theory-->
+
+                                        <div class="col-md-4 col-sm-6 mb-2">
+                                            <label for="subject_practical">Practical</label>
+                                            <input type="text" name="subject_practical" id="subject_practical" class="form-control" placeholder="Practical">
+                                        </div> <!--subject Practical-->
+
+                                        <div class="col-md-4 col-sm-12 mb-2">
+                                            <label for="subject_credit">Credit</label>
+                                            <input type="text" name="subject_credit" id="subject_credit" class="form-control" placeholder="Credit">
+                                        </div> <!--subject Credit-->
+
+                                        <div class="col-12 d-flex justify-content-end">
+                                            <button type="button" class="cancel-btn">Cancel</button>
+                                            <button type="submit" class="btn-grad">Add</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- add subject section end -->
+
+                    <!-- attendance section start -->
+                    <div class="content" data="attendance">
+                        <div class="row  p-2">
+                            <h2 class="text-center p-2 border-bottom col-12 mt-1">Student Attendance</h2>
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="a_teacher">Teacher <span class="required">*</span></label>
+                                <div class="form-control">Engr. Manik Ullah</div>
+                            </div> <!--Teacher-->
+
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="a_department">Department <span class="required">*</span></label>
+                                <select name="a_department" id="a_department" class="form-control" required>
+                                    <option value="" checked>Select Department</option>
+                                    <option value="computer" checked>Computer</option>
+                                    <option value="civil" checked>Civil</option>
+                                </select>
+                            </div> <!--Departments-->
+
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="a_semester">Semester <span class="required">*</span></label>
+                                <select name="a_semester" id="a_semester" class="form-control" required>
+                                    <option value="" checked>Select Semester</option>
+                                    <option value="1st" checked>1st</option>
+                                    <option value="2nd" checked>2nd</option>
+                                </select>
+                            </div> <!--Semester-->
+
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="a_subject">Subject <span class="required">*</span></label>
+                                <select name="a_subject" id="a_subject" class="form-control" required>
+                                    <option value="" checked>Select Subject</option>
+                                </select>
+                            </div> <!--subject-->
+
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="a_date">Date <span class="required">*</span></label>
+                                <input type="date" name="a_date" id="a_date" class="form-control"> 
+                            </div> <!--date-->
+                            
+                            <div class="col-md-4 col-sm-6 p-2">
+                                <label for="submit-btn" class="invisible">Submit</label>
+                                <input type="button" value="Submit" class="form-control bg-primary text-white">
+                            </div>
+
+                            <div class="col-12 student-table">
+                                <div class="table-main" style="overflow-x: auto;">
+                                    <form action="" class="attendance-table">
+                                        <table class="table table-hover w-100">
+                                            <thead >
+                                                <tr>
+                                                    <th></th>
+                                                    <th>Roll</th>
+                                                    <th>Name</th>
+                                                    <th>status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="present" id="std_id">
+                                                    </td>
+                                                    <td>189296</td>
+                                                    <td>Muslima Jahan</td>
+                                                    <td>Absent</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" name="present" id="std_id">
+                                                    </td>
+                                                    <td>609554</td>
+                                                    <td>Tanvir Islam</td>
+                                                    <td>Absent</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="w-100 d-flex justify-content-end">
+                                            <button type="submit" class="btn-grad">Present</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div><!--student table-->
+                        </div>
+                    </div>
+                    <!-- attendance section end -->
+
+                    <!-- attendance calculation section start -->
+                    <!-- attendance calculation section end -->
 
                  </div>
                 <!-- content section end -->
