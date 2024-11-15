@@ -248,7 +248,9 @@ header {
 /* probidhan section */
 .probidhan-content div {
   padding: .5rem;
+  color: white;
   border-radius: .2rem;
+  box-shadow: 0px 2px 8px #0005;
 }
 
 .probidhan-content:nth-child(odd) div{
@@ -259,15 +261,29 @@ header {
   background-color: var(--background-3);
 }
 
-.probidhan-content {
-  color: white;
-}
-
 /* add probidhan section */
 
-/* student section */
+/* seasson section */
+.seasson-ceontent {
+  cursor: pointer;
+}
 
-/* add student section */
+.seasson-ceontent div {
+  padding: .5rem;
+  border-radius: .2rem;
+  color: white;
+  box-shadow: 0px 2px 8px #0005;
+}
+
+.seasson-ceontent:nth-child(odd) div{
+  background-color: var(--background-3);
+}
+
+.seasson-ceontent:nth-child(even) div{
+  background-color: var(--background);
+}
+
+/* add seasson section */
 
 /* subject section */
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -70,8 +71,7 @@
                         <div class="aside-menu p-2 m-0" data="teachers">Teachers</div>
                         <div class="aside-menu p-2 m-0" data="departments">Departments</div>
                         <div class="aside-menu p-2 m-0" data="probidhans">Probidhans</div>
-                        <div class="aside-menu p-2 m-0" data="students">Students</div>
-                        <div class="aside-menu p-2 m-0" data="subjects">Subjects</div>
+                        <div class="aside-menu p-2 m-0" data="seasson">Seasson</div>
                         <div class="aside-menu p-2 m-0" data="attendence">Attendence</div>
                         <div class="aside-menu p-2 m-0" data="attendence-calculation">Attendence Calculation</div>
                     </div>
@@ -111,10 +111,10 @@
                                 </div>
                             </div> <!--Probidhans-->
 
-                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="students">
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="seasson">
                                 <div>
-                                    <h5>Students</h5>
-                                    <small>10 Students</small>
+                                    <h5>Seassons</h5>
+                                    <small>10 Seassons</small>
                                 </div>
                             </div> <!--Students-->
 
@@ -475,51 +475,53 @@
                      </div>
                     <!-- add probidhan section end -->
 
-                    <!-- Student Section Start -->
-                    <div class="content p-2" data="students">
+                    <!-- seasson Section Start -->
+                    <div class="content p-2" data="seasson">
                         <div class="row">
-                            <h3 class="col-12 p-2">Students</h3>
-                            <form action="/students" method="GET" class="w-100 p-2">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 mb-2">
-                                        <label for="department">Department</label>
-                                        <select name="department" id="department" class="form-control">
-                                            <option selected value="">Select Department</option>
-                                            <option value="computer">Computer Science and Technology</option>
-                                            <option value="mechanical">Mechanical Engineering</option>
-                                            <option value="electrical">Electrical Engineering</option>
-                                        </select>
-                                    </div><!-- Department Filter -->
-
-                                    <div class="col-md-3 col-sm-6 mb-2">
-                                        <label for="probidhan">Probidhan</label>
-                                        <select name="probidhan" id="probidhan" class="form-control">
-                                            <option selected value="">Select Probidhan</option>
-                                            <option value="2022">2022</option>
-                                            <option value="2021">2021</option>
-                                            <option value="2020">2020</option>
-                                        </select>
-                                    </div><!-- Probidhan Filter -->
-
-                                    <div class="col-md-3 col-sm-6 mb-2">
-                                        <label for="session">Session</label>
-                                        <select name="session" id="session" class="form-control">
-                                            <option selected value="">Select Session</option>
-                                            <option value="fall">Fall</option>
-                                            <option value="spring">Spring</option>
-                                            <option value="summer">Summer</option>
-                                        </select>
-                                    </div><!-- Session Filter -->
-
-                                    <div class="col-md-3 col-sm-6 mb-2">
-                                        <label>&nbsp;</label> <!-- Spacer for alignment -->
-                                        <input type="submit" value="Filter" class="btn-grad form-control">
-                                    </div><!-- Filter Button -->
+                            <h3 class="p-2 text-center col-12">Seassons</h3>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button data="add-seasson" class="btn-grad add-btn">Add Seassons</button>
+                            </div>
+                            <div class="col-md-3 col-sm-6 p-2 seasson-ceontent">
+                                <div>
+                                    <h5>21-22</h5>
+                                    <small>Starting Year 2021</small>
                                 </div>
-                            </form>
+                            </div>
+
+                            <div class="col-md-3 col-sm-6 p-2 seasson-ceontent">
+                                <div>
+                                    <h5>22-23</h5>
+                                    <small>Starting Year 2022</small>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Student Section End -->
+                    <!-- seasson Section End -->
+
+                    <!-- add seasson section start -->
+                    <div class="col-md-6 col-sm-12 add-form my-5 mx-auto d-none" data="add-seasson">
+                        <form action="" class="border rounded shadow-sm">
+                            <h3 class="w-100 p-2">Add Seasson</h3>
+                            <div class="row p-2">
+                                <div class="col-12 mb-2">
+                                    <label for="seasson">Seasson <span>*</span></label>
+                                    <input title="Input Seasson" type="text" name="seasson" id="seasson" class="form-control">
+                                </div> <!--Seasson-->
+
+                                <div class="col-12 mb-2">
+                                    <label for="seasson_start">Seasson Starting Year <span>*</span></label>
+                                    <input title="Input Seasson Starting Year" type="text" name="seasson_start" id="seasson_start" class="form-control">
+                                </div> <!--seasson starting year-->
+
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="button" class="cancel-btn">Cancel</button>
+                                    <button type="submit" class="btn-grad">Add</button>
+                                </div> <!--seasson starting year-->
+                            </div>
+                        </form>
+                     </div>
+                    <!-- add seasson section end -->
 
                  </div>
                 <!-- content section end -->
