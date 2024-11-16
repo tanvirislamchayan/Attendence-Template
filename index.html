@@ -73,7 +73,9 @@
                         <div class="aside-menu p-2 m-0" data="probidhans">Probidhans</div>
                         <div class="aside-menu p-2 m-0" data="seasson">Seasson</div>
                         <div class="aside-menu p-2 m-0" data="semester">Semester</div>
+                        <div class="aside-menu p-2 m-0" data="shift">Group/Shift</div>
                         <div class="aside-menu p-2 m-0" data="subjects">Subjects</div>
+                        <div class="aside-menu p-2 m-0" data="student">Students</div>
                         <div class="aside-menu p-2 m-0" data="attendance">Attendance</div>
                         <div class="aside-menu p-2 m-0" data="attendance-calculation">Attendance Calculation</div>
                     </div>
@@ -127,12 +129,26 @@
                                 </div>
                             </div> <!--semesters-->
 
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="shift">
+                                <div>
+                                    <h5>Group/Shift</h5>
+                                    <small>2 Group/Shift</small>
+                                </div>
+                            </div> <!--Group/Shift-->
+
                             <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="subjects">
                                 <div>
                                     <h5>Subjects</h5>
                                     <small>10 Subjects</small>
                                 </div>
                             </div> <!--Subjects-->
+
+                            <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="student">
+                                <div>
+                                    <h5>Students</h5>
+                                    <small>10 Students</small>
+                                </div>
+                            </div> <!--Students-->
 
                             <div class="col-md-3 col-sm-4 p-2 dashboard-content" data="attendance">
                                 <div>
@@ -479,7 +495,7 @@
                     <!-- add probidhan section start -->
                      <div class="col-md-6 col-sm-12 add-form my-5 mx-auto d-none" data="add-probidhan">
                         <form action="" class="border rounded shadow-sm">
-                            <h3 class="w-100 p-2 text-center">Add Probidhan</h3>
+                            <h2 class="w-100 p-2 text-center">Add Probidhan</h2>
                             <div class="row p-2">
                                 <div class="col-12 mb-2">
                                     <label for="probidhan">Probidhan <span>*</span></label>
@@ -504,7 +520,7 @@
                     <!-- seasson Section Start -->
                     <div class="content p-2" data="seasson">
                         <div class="row">
-                            <h3 class="p-2 text-center col-12">Seassons</h3>
+                            <h2 class="p-2 text-center col-12">Seassons</h2>
                             <div class="col-12 d-flex justify-content-end">
                                 <button data="add-seasson" class="btn-grad add-btn">Add Seassons</button>
                             </div>
@@ -552,7 +568,7 @@
                     <!-- Semester section start -->
                     <div class="content p-2" data="semester">
                         <div class="row">
-                            <h3 class="p-2 text-center col-12">Semesters</h3>
+                            <h2 class="p-2 text-center col-12">Semesters</h2>
                             <!-- <div class="col-12 d-flex justify-content-end">
                                 <button data="add-semester" class="btn-grad add-btn">Add Semester</button>
                             </div> -->
@@ -573,10 +589,46 @@
                     </div>
                     <!-- Semester section end -->
 
+                    <!-- shift section start -->
+                     <div class="content p-2" data="shift">
+                        <div class="row">
+                            <h2 class="col-12 text-center text-white p-2">Groups/Shifts</h2>
+                            <div class="col-12 d-flex justify-content-end">
+                                <button type="button" class="btn-grad add-btn" data="add-group">Add Groups</button>
+                            </div>
+                            <div class="col-md-3 col-sm-6 p-2 my-2 group-content-section">
+                                <div>
+                                    <h2 class="p-0 m-0 bg-transparent">Group A</h2>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                    <!-- shift section end -->
+
+                    <!-- add shift section start -->
+                    <div class="col-md-6 col-sm-12 add-form my-5 d-none mx-auto" data="add-group">
+                        <form action="" class="border rounded shadow-sm">
+                            <h3 class="w-100 p-2">Add Seasson</h3>
+                            <div class="row p-2">
+                                <div class="col-12 mb-2">
+                                    <label for="shift">Group/Shift <span>*</span></label>
+                                    <input title="Enter Group/Shift Name" type="text" name="shift" id="shift" class="form-control">
+                                </div> <!--Seasson-->
+
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="button" class="cancel-btn">Cancel</button>
+                                    <button type="submit" class="btn-grad">Add</button>
+                                </div> <!--btn-->
+                            </div>
+                        </form>
+                     </div>
+
+                    <!-- add shift section end -->
+
                     <!-- subjects section start -->
                      <div class="content p-2" data="subjects">
                         <div class="row">
-                            <h3 class="w-100 p-2 text-center">Subjects for 1st Semester</h3>
+                            <h2 class="w-100 p-2 text-center">Subjects for 1st Semester</h2>
                             <div class="col-12 d-flex justify-content-end">
                                 <button data="filter-subject" type="button" class="btn-grad add-btn">Filter Subject</button>
                                 <button data="add-subject" class="btn-grad add-btn">Add Subjects</button>
@@ -596,7 +648,7 @@
                     <!-- filter subject section start -->
                     <div class="col-12 add-form p-2 d-none" data="filter-subject">
                         <div class="row">
-                            <h3 class="col-12 p-2 text-center">Filter Subjects</h3>
+                            <h2 class="col-12 p-2 text-center">Filter Subjects</h2>
                             <div class="col-md-6 col-sm-12 mx-auto my-5">
                                 <form action="" class="border shadow-sm p-2">
                                     <div class="row">
@@ -636,7 +688,7 @@
                     <!-- add subject section start -->
                     <div class="col-12 add-form p-2 d-none" data="add-subject">
                         <div class="row">
-                            <h3 class="text-center col-12 p-2 text-white">Add Subjects</h3>
+                            <h2 class="text-center col-12 p-2 text-white">Add Subjects</h2>
                             <div class="col-md-6 col-sm-12 mx-auto my-5">
                                 <form action="" class="border rounded shadow-sm p-2">
                                     <div class="row">
@@ -696,6 +748,48 @@
                         </div>
                     </div>
                     <!-- add subject section end -->
+
+                    <!-- students section start -->
+                     <div class="content p-2" data="student">
+                        <div class="row">
+                            <h2 class="col-12 p-2 text-center text-white">Students of Semester</h2>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 d-flex justify-content-start align-items-center">
+                                    <button type="button" class="add-btn btn-grad">Filter Students</button>
+                                    <button type="button" class="add-btn btn-grad">Add Students</button>
+                                </div>
+                                <form 
+                                    action="#" 
+                                    class="search-form col-md-6 col-sm-12 d-flex justify-content-start" 
+                                    onsubmit="searchWithInput(event)"
+                                >
+                                    <input 
+                                        type="search" 
+                                        class="search-input" 
+                                        placeholder="Search Student Roll, Name, Semester" 
+                                        onfocus="showSuggestions(); showClearButton();" 
+                                        oninput="filterSuggestions(this.value); showClearButton();"
+                                    >
+                                    <button type="button" class="clear-button" onclick="clearSearchInput()" >
+                                        &times; <!-- Cross icon -->
+                                    </button>
+                                    <button type="submit" class="search-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                    <div id="suggestion-box" class="suggestion-box">
+                                        <div class="suggestion-item" onclick="selectSuggestion(this)">John Doe - Roll 101 - Semester 1</div>
+                                        <div class="suggestion-item" onclick="selectSuggestion(this)">Jane Smith - Roll 102 - Semester 2</div>
+                                        <div class="suggestion-item" onclick="selectSuggestion(this)">Mike Johnson - Roll 103 - Semester 3</div>
+                                        <div class="suggestion-item" onclick="selectSuggestion(this)">Emily Davis - Roll 104 - Semester 4</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                     </div>
+                    <!-- students section end -->
+
+                    <!-- add students section start -->
+                    <!-- add students section end -->
 
                     <!-- attendance section start -->
                     <div class="content" data="attendance">
@@ -783,7 +877,191 @@
                     <!-- attendance section end -->
 
                     <!-- attendance calculation section start -->
+                     <div class="content" data="attendance-calculation">
+                        <div class="row p-2">
+                            <h2 class="col-12 p-2 text-center">Attendance Calculateion</h2>
+                            <div data="cal-date" class="col-md-3 col-sm-6 my-2 attendance-calculation-content">
+                                <div>
+                                    <h5>Calculate Day</h5>
+                                </div>
+                            </div><!--calculate day-->
+                            <div data="cal-month" class="col-md-3 col-sm-6 my-2 attendance-calculation-content">
+                                <div>
+                                    <h5>Calculate Month</h5>
+                                </div>
+                            </div><!--calculate month-->
+                            <div data="cal-semester" class="col-md-3 col-sm-6 my-2 attendance-calculation-content">
+                                <div>
+                                    <h5>Calculate Semester</h5>
+                                </div>
+                            </div><!--calculate semester-->
+
+                            <!-- calculate day section start -->
+                            <div class="calc-result d-none col-12 my-3" data="cal-date">
+                                <div class="row">
+                                    <h3 class="col-12 p-2 text-center">Date Calculation</h3>
+                                    <form action="" class="w-100 mb-3">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="d_department">Department <span>*</span></label>
+                                                <select required name="d_department" id="d_department" class="form-control">
+                                                    <option value="">Select Department</option>
+                                                </select> 
+                                            </div><!--Department-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="d_semester">Semester <span>*</span></label>
+                                                <select required name="d_semester" id="d_semester" class="form-control">
+                                                    <option value="">Select Semester</option>
+                                                </select> 
+                                            </div><!--Semester-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="d_date">Date <span>*</span></label>
+                                                <select required name="d_date" id="d_date" class="form-control">
+                                                    <option value="">Select Date</option>
+                                                </select> 
+                                            </div><!--Date-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                               <label for="submit" class="invisible">Submit</label>
+                                               <input type="submit" value="Submit" class="bg-primary text-white form-control">
+                                            </div><!--button-->
+                                        </div>
+                                    </form> <!--Calculation form-->
+                                    <div class="col-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Roll</th>
+                                                    <th>Name</th>
+                                                    <th class="text-end">Total Attendance (%)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>189296</td>
+                                                    <td>Muslima Jahan</td>
+                                                    <td class="text-end">92%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- calculate day section end -->
+
+                            <!-- calculate month section start -->
+                            <div class="calc-result d-none col-12 my-3" data="cal-month">
+                                <div class="row">
+                                    <h3 class="col-12 p-2 text-center">Month Calculation</h3>
+                                    <form action="" class="w-100 mb-3">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="m_department">Department <span>*</span></label>
+                                                <select required name="m_department" id="m_department" class="form-control">
+                                                    <option value="">Select Department</option>
+                                                </select> 
+                                            </div><!--Department-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="m_semester">Semester <span>*</span></label>
+                                                <select required name="m_semester" id="m_semester" class="form-control">
+                                                    <option value="">Select Semester</option>
+                                                </select> 
+                                            </div><!--Semester-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                                <label for="m_month">Month <span>*</span></label>
+                                                <select required name="m_month" id="m_month" class="form-control">
+                                                    <option value="">Select Month</option>
+                                                </select> 
+                                            </div><!--Month-->
+                                            <div class="col-md-3 col-sm-6 form-group p-2">
+                                               <label for="submit" class="invisible">Submit</label>
+                                               <input type="submit" value="Submit" class="bg-primary text-white form-control">
+                                            </div><!--button-->
+                                        </div>
+                                    </form> <!--Calculation form-->
+                                    <div class="col-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Roll</th>
+                                                    <th>Name</th>
+                                                    <th class="text-end">Total Attendance (%)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>189296</td>
+                                                    <td>Muslima Jahan</td>
+                                                    <td class="text-end">92%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- calculate month section end -->
+
+                            <!-- calculate semester section start -->
+                            <div class="calc-result d-none col-12 my-3" data="cal-semester">
+                                <div class="row">
+                                    <h3 class="col-12 p-2 text-center">Semester Calculation</h3>
+                                    <form action="" class="w-100 mb-3">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 form-group p-2">
+                                                <label for="s_department">Department <span>*</span></label>
+                                                <select required name="s_department" id="s_department" class="form-control">
+                                                    <option value="">Select Department</option>
+                                                </select> 
+                                            </div><!--Department-->
+                                            <div class="col-md-6 col-sm-6 form-group p-2">
+                                                <label for="s_semester">Semester <span>*</span></label>
+                                                <select required name="s_semester" id="s_semester" class="form-control">
+                                                    <option value="">Select Semester</option>
+                                                </select> 
+                                            </div><!--Semester-->
+                                            <div class="col-md-4 col-sm-6 form-group p-2">
+                                                <label for="s_month_start">Month start <span>*</span></label>
+                                                <select required name="s_month_start" id="s_month_start" class="form-control">
+                                                    <option value="">Select Month start</option>
+                                                </select> 
+                                            </div><!--Month start-->
+                                            <div class="col-md-4 col-sm-6 form-group p-2">
+                                                <label for="s_month_end">Month End <span>*</span></label>
+                                                <select required name="s_month_end" id="s_month_end" class="form-control">
+                                                    <option value="">Select Month End</option>
+                                                </select> 
+                                            </div><!--Month End-->
+                                            <div class="col-md-4 col-sm-6 form-group p-2">
+                                               <label for="submit" class="invisible">Submit</label>
+                                               <input type="submit" value="Submit" class="bg-primary text-white form-control">
+                                            </div><!--button-->
+                                        </div>
+                                    </form> <!--Calculation form-->
+                                    <div class="col-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Roll</th>
+                                                    <th>Name</th>
+                                                    <th class="text-end">Total Attendance (%)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>189296</td>
+                                                    <td>Muslima Jahan</td>
+                                                    <td class="text-end">92%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- calculate semester section end -->
+
+                        </div>
+                     </div>
                     <!-- attendance calculation section end -->
+
 
                  </div>
                 <!-- content section end -->

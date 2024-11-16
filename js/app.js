@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set the title based on the 'page' parameter in the URL
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page');
+    const cal = params.get('calculate')
     const pageContents = document.querySelectorAll('.content');
 
     if (page) {
@@ -62,8 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             }
         });
-        
     }
+
+   
 
     const addBtn = document.querySelectorAll('.add-btn');
     const addForm = document.querySelectorAll('.add-form');
@@ -92,8 +94,35 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-    
-    
+
+    // calculation
+    function loadCalcPage(calcPage) {
+        const currentUrl = window.location.pathname;
+        const params = new URLSearchParams(window.location.search);
+        params.set('calculate', calcPage);
+        window.location.href = currentUrl + '?' + params.toString();
+    }
+    const calBtns = document.querySelectorAll('.attendance-calculation-content');
+    const calResults = document.querySelectorAll('.calc-result');
+    calBtns.forEach(btn=>{
+        btn.addEventListener('click', ()=> {
+            loadCalcPage(btn.getAttribute('data'))
+        });
+    });
+
+    if (cal) {
+        calResults.forEach(res => {
+            res.classList.add('d-none')
+            if(res.getAttribute('data') === cal) {
+                res.classList.remove('d-none');
+            }
+        });
+    }
+
+    if (page !== 'attendance-calculation' && cal) {
+        params.delete('calculate');
+        window.history.replaceState({}, '', `${window.location.pathname}?${params.toString()}`);
+    }
 });
 
 
@@ -138,3 +167,229 @@ function previewDepartmentImage(event) {
         reader.readAsDataURL(file); // Read the file as a data URL
     }
 }
+
+
+// suggestions
+// Show the suggestions box when the input field gains focus
+function showSuggestions() {
+    const suggestionBox = document.getElementById('suggestion-box');
+    suggestionBox.style.display = 'block';
+}
+
+// Filter suggestions based on the user's query
+function filterSuggestions(query) {
+    const suggestionBox = document.getElementById('suggestion-box');
+    const suggestions = suggestionBox.querySelectorAll('.suggestion-item');
+    query = query.trim().toLowerCase();
+
+    if (query === "") {
+        suggestions.forEach(item => item.style.display = 'block');
+        return;
+    }
+
+    suggestions.forEach(item => {
+        if (item.textContent.toLowerCase().includes(query)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Handle suggestion selection
+// Show the suggestions box and the clear button when focusing on the input
+function showSuggestions() {
+    const suggestionBox = document.getElementById('suggestion-box');
+    suggestionBox.style.display = 'block';
+}
+
+function showClearButton() {
+    const searchInput = document.querySelector('.search-input');
+    const clearButton = document.querySelector('.clear-button');
+
+    if (searchInput.value.trim() !== "") {
+        clearButton.style.display = 'inline'; // Show the clear button
+    } else {
+        clearButton.style.display = 'none'; // Hide the clear button if the input is empty
+    }
+}
+
+function filterSuggestions(query) {
+    const suggestionBox = document.getElementById('suggestion-box');
+    const suggestions = suggestionBox.querySelectorAll('.suggestion-item');
+    query = query.trim().toLowerCase();
+
+    if (query === "") {
+        suggestions.forEach(item => item.style.display = 'block');
+        return;
+    }
+
+    suggestions.forEach(item => {
+        if (item.textContent.toLowerCase().includes(query)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Clear the input field and hide the clear button
+// Show the suggestions box when the input field gains focus
+function showSuggestions() {
+    const suggestionBox = document.getElementById('suggestion-box');
+    suggestionBox.style.display = 'block';
+}
+
+// Filter suggestions based on the user's query
+function filterSuggestions(query) {
+    const suggestionBox = document.getElementById('suggestion-box');
+    const suggestions = suggestionBox.querySelectorAll('.suggestion-item');
+    query = query.trim().toLowerCase();
+
+    if (query === "") {
+        suggestions.forEach(item => item.style.display = 'block');
+    } else {
+        suggestions.forEach(item => {
+            if (item.textContent.toLowerCase().includes(query)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    // Toggle the visibility of the clear button
+    toggleClearButton(query);
+}
+
+// Show or hide the clear button based on input value
+function toggleClearButton(query) {
+    const clearButton = document.querySelector('.clear-btn');
+    if (query !== "") {
+        clearButton.classList.add('visible');
+    } else {
+        clearButton.classList.remove('visible');
+    }
+}
+
+// Handle suggestion selection
+// function selectSuggestion(element) {
+//     const searchInput = document.querySelector('.search-input');
+//     const form = document.querySelector('.search-form');
+
+//     // Set the input value to the clicked suggestion
+//     searchInput.value = element.textContent;
+
+//     // Hide the suggestion box
+//     document.getElementById('suggestion-box').style.display = 'none';
+
+//     // Submit the form programmatically
+//     form.requestSubmit(); // This triggers the form's onsubmit handler
+// }
+
+// // Handle form submission
+// function searchWithInput(event) {
+//     event.preventDefault(); // Prevent the default form submission
+
+//     const searchInput = document.querySelector('.search-input');
+//     const query = searchInput.value;
+
+//     // Perform search logic here (e.g., send to server or log to console)
+//     console.log(`Performing search for: ${query}`);
+// }
+
+// // Clear the search input field
+// function clearInput() {
+//     const searchInput = document.querySelector('.search-input');
+//     searchInput.value = ""; // Clear the input value
+
+//     // Hide the suggestion box
+//     document.getElementById('suggestion-box').style.display = 'none';
+
+//     // Hide the clear button
+//     toggleClearButton("");
+// }
+
+// // Hide the suggestions box when clicking outside
+// document.addEventListener('click', function(event) {
+//     const suggestionBox = document.getElementById('suggestion-box');
+//     const searchInput = document.querySelector('.search-input');
+
+//     if (!suggestionBox.contains(event.target) && event.target !== searchInput) {
+//         suggestionBox.style.display = 'none';
+//     }
+// });
+
+
+// Show suggestions when input is focused
+function showSuggestions() {
+    const suggestionBox = document.getElementById('suggestion-box');
+    suggestionBox.style.display = 'block';
+}
+
+// Filter suggestions based on user input
+function filterSuggestions(query) {
+    const suggestionBox = document.getElementById('suggestion-box');
+    const suggestions = suggestionBox.querySelectorAll('.suggestion-item');
+    query = query.trim().toLowerCase();
+
+    if (query === "") {
+        suggestions.forEach(item => item.style.display = 'block');
+        return;
+    }
+
+    suggestions.forEach(item => {
+        if (item.textContent.toLowerCase().includes(query)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// Handle selecting a suggestion
+function selectSuggestion(element) {
+    const searchInput = document.querySelector('.search-input');
+    searchInput.value = element.textContent; // Set the input value to the clicked suggestion
+    document.getElementById('suggestion-box').style.display = 'none';
+    performSearch(searchInput.value); // Optionally perform the search immediately
+}
+
+// Handle form submission
+function searchWithInput(event) {
+    event.preventDefault(); // Prevent the default form submission
+    const searchInput = document.querySelector('.search-input');
+    performSearch(searchInput.value);
+}
+
+// Perform the search action (you can replace this with your own logic)
+function performSearch(query) {
+    console.log("Performing search with query:", query);
+}
+
+// Show the clear button if there's text in the search input
+function showClearButton() {
+    const searchInput = document.querySelector('.search-input');
+    const clearButton = document.querySelector('.clear-button');
+    
+    // Show the button if there's text or if the input is focused
+    if (searchInput.value.trim() !== "" || document.activeElement === searchInput) {
+        clearButton.style.display = "block";  // Show the clear button
+    } else {
+        clearButton.style.display = "none";   // Hide the clear button if empty and not focused
+    }
+}
+// Clear the input field when the clear button is clicked
+function clearSearchInput() {
+    const searchInput = document.querySelector('.search-input');
+    searchInput.value = "";  // Clear the input field
+    showClearButton();       // Update the button visibility
+}
+
+// Hide suggestions when clicking outside of the form
+document.addEventListener('click', function(event) {
+    const suggestionBox = document.getElementById('suggestion-box');
+    if (!suggestionBox.contains(event.target) && !event.target.classList.contains('search-input')) {
+        suggestionBox.style.display = 'none';
+    }
+});
