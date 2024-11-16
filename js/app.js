@@ -272,55 +272,6 @@ function toggleClearButton(query) {
     }
 }
 
-// Handle suggestion selection
-// function selectSuggestion(element) {
-//     const searchInput = document.querySelector('.search-input');
-//     const form = document.querySelector('.search-form');
-
-//     // Set the input value to the clicked suggestion
-//     searchInput.value = element.textContent;
-
-//     // Hide the suggestion box
-//     document.getElementById('suggestion-box').style.display = 'none';
-
-//     // Submit the form programmatically
-//     form.requestSubmit(); // This triggers the form's onsubmit handler
-// }
-
-// // Handle form submission
-// function searchWithInput(event) {
-//     event.preventDefault(); // Prevent the default form submission
-
-//     const searchInput = document.querySelector('.search-input');
-//     const query = searchInput.value;
-
-//     // Perform search logic here (e.g., send to server or log to console)
-//     console.log(`Performing search for: ${query}`);
-// }
-
-// // Clear the search input field
-// function clearInput() {
-//     const searchInput = document.querySelector('.search-input');
-//     searchInput.value = ""; // Clear the input value
-
-//     // Hide the suggestion box
-//     document.getElementById('suggestion-box').style.display = 'none';
-
-//     // Hide the clear button
-//     toggleClearButton("");
-// }
-
-// // Hide the suggestions box when clicking outside
-// document.addEventListener('click', function(event) {
-//     const suggestionBox = document.getElementById('suggestion-box');
-//     const searchInput = document.querySelector('.search-input');
-
-//     if (!suggestionBox.contains(event.target) && event.target !== searchInput) {
-//         suggestionBox.style.display = 'none';
-//     }
-// });
-
-
 // Show suggestions when input is focused
 function showSuggestions() {
     const suggestionBox = document.getElementById('suggestion-box');
