@@ -83,7 +83,11 @@ The central hub where users can view summaries, navigate sections, and access sh
 - **Month-wise**: Select department, semester, and month to calculate percentages.
 - **Semester-wise**: Select department, semester, and a range of months to calculate percentages.
 
+
+
 - **Extra Feature**: Exportable Excel Sheet
+
+*GO TO `SCREEN SHOTS` FOLDER TO VIEW IMAGES*
 
 ---
 
