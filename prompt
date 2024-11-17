@@ -1,0 +1,30 @@
+I've created a html design template with html css and fundamental js to manage Student attendace and calculat percentise for polytechninc institutes 
+
+I've some sections here:
+Dashboard
+Authors
+Teachers
+Departments
+Probidhans
+Seasson
+Semester
+Group/Shift
+Subjects
+Students
+Attendance
+Attendance Calculation 
+
+dashboard: whear user can see the summury or short carts to go somewhre
+author is basically admin who can access all of the features of the website such as adding teacher, adding new author, enable disable users, create or delete users, adding deprtments, probidhans, seassons, semester, group/shifts, subjects and also delete. in short only author can delete and create and other users will not be able to create or delete any objects accept attendence their is a view for author and only author can see teacher and author view I meant only author can see who is author and teacher and how many they are
+
+teachers is an user also but they will only get access to create attendence and their is a view for teachers also
+
+other all sections has a view 
+on students section there is something that other section does't that there is a searching system and author can create multiple students at a time using excel or create a single student object using form
+
+and attendace calculation section has something deferent too their is 3 options to calculate the attendence percentage of each student they are: 1. Date wise calcualtion, 2. Month wise calculation, 3. semester wise calculation 
+on date wise calculation user(teacher) has to select depertment semester and date to get calculation
+on month wise calculation user(teacher) has to select depertment semester and month to get calculation
+on semester wise calculation user(teacher) has to select depertment semester and 2 months (start and end month) to get calculation
+
+and any one else won't be able to get access if user is not logged in for security perpouse
