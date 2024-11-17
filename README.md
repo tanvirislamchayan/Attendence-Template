@@ -1,5 +1,5 @@
 
-# Polytechnic Attendance Management System
+# POLYTECHNINC ATTENDANCE MANAGEMENT SYSTEM TEMPLATE
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -106,11 +106,11 @@ The central hub where users can view summaries, navigate sections, and access sh
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/polytechnic-attendance-system.git
+   git clone https://github.com/tanvirislamchayan/Attendence-Template.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd polytechnic-attendance-system
+   cd Attendence-Template-main
    ```
 3. Open the `index.html` file in your browser to launch the application.
 
