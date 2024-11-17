@@ -85,6 +85,10 @@ input:focus {
   border-color: #000;
 }
 
+form {
+  overflow: hidden;
+}
+
 form h2, h3 {
   background-color: var(--background-2);
   color: #fff;
@@ -98,6 +102,9 @@ form span {
   color: red;
 }
 
+.rounded {
+  overflow: hidden !important;
+}
 
 /* loader section */
 .loader-section {
@@ -446,4 +453,20 @@ header {
 
 .attendance-calculation-content:nth-child(even) div{
   background-color: var(--background-3);
+}
+
+/* Login Section */
+.login-section {
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.login-section .container {
+  min-height: 100vh; 
+}
+
+.card {
+  border-radius: .2rem;
+  overflow: hidden;
+  background: #fff; 
 }
